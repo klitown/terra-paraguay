@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from "next/link";
+
 // ** MUI Imports **
 import Grid from '@mui/material/Grid'
 import { Container } from '@mui/material';
@@ -9,6 +10,7 @@ import PlaceCard from 'src/views/dashboard/PlaceCard';
 // Firebase
 import { collection, getDocs } from 'firebase/firestore';
 import { database } from '../../firebaseConfig';
+
 // database itself
 const dbInstance = collection(database, 'lugares');
 

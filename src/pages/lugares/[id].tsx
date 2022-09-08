@@ -3,6 +3,7 @@ import { Card } from "@mui/material"
 import { database } from '../../../firebaseConfig';
 import { doc, getDoc } from "firebase/firestore";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const DetalleLugar: FunctionComponent<any> = () => {
 
@@ -43,7 +44,10 @@ const DetalleLugar: FunctionComponent<any> = () => {
                     <nav aria-label="Breadcrumb">
                         <ol role="list" className="flex items-center text-md text-gray-500 space-x-1">
                             <li>
-                                <a className="block transition-colors hover:text-gray-700" href="/"> Inicio </a>
+                                <Link href='/'>
+                                    <a className="block transition-colors hover:text-gray-700"> Inicio </a>
+                                </Link>
+
                             </li>
 
                             <li>
@@ -151,7 +155,7 @@ const DetalleLugar: FunctionComponent<any> = () => {
                     <div className="basis-1/2">
                         <div className="flex flex-row space-x-3">
 
-                            <a className="button--svg" href="https://www.facebook.com/" target="_blank">
+                            <a className="button--svg" href="https://www.facebook.com/" target="_blank" rel="noreferrer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" role="img" aria-labelledby="facebook-icon">
                                     <title id="facebook-icon">Facebook</title>
                                     <path fill="#3C599A" d="M18.896 20.12h1.758v-1.708c0-.753.02-1.915.566-2.635.576-.762 1.368-1.28 2.73-1.28 2.218 0 3.15.316 3.15.316l-.438 2.605s-.73-.212-1.417-.212c-.684 0-1.296.245-1.296.93v1.985h2.803l-.194 2.547h-2.61v8.84h-3.297v-8.84h-1.758V20.12z" />
@@ -159,7 +163,7 @@ const DetalleLugar: FunctionComponent<any> = () => {
                                 </svg>
                             </a>
 
-                            <a className="button--svg" href="https://twitter.com/" target="_blank">
+                            <a className="button--svg" href="https://twitter.com/" target="_blank" rel="noreferrer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" role="img" aria-labelledby="twitter-icon">
                                     <title id="twitter-icon">Twitter</title>
                                     <path className="button--svg__border" fill="#E5E5E5" d="M23 3c11.028 0 20 8.972 20 20s-8.972 20-20 20S3 34.028 3 23 11.972 3 23 3m0-2C10.85 1 1 10.85 1 23s9.85 22 22 22 22-9.85 22-22S35.15 1 23 1z" />
@@ -167,7 +171,7 @@ const DetalleLugar: FunctionComponent<any> = () => {
                                 </svg>
                             </a>
 
-                            <a className="button--svg" href="https://www.instagram.com/" target="_blank">
+                            <a className="button--svg" href="https://www.instagram.com/" target="_blank" rel="noreferrer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" role="img" aria-labelledby="instagram-icon">
                                     <title id="instagram-icon">Instagram</title>
                                     <path className="button--svg__border" fill="#E5E5E5" d="M23 3c11.028 0 20 8.972 20 20s-8.972 20-20 20S3 34.028 3 23 11.972 3 23 3m0-2C10.85 1 1 10.85 1 23s9.85 22 22 22 22-9.85 22-22S35.15 1 23 1z" />
@@ -175,7 +179,7 @@ const DetalleLugar: FunctionComponent<any> = () => {
                                 </svg>
                             </a>
 
-                            <a className="button--svg" href="https://www.youtube.com/" target="_blank">
+                            <a className="button--svg" href="https://www.youtube.com/" target="_blank" rel="noreferrer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" role="img" aria-labelledby="youtube-icon">
                                     <title id="youtube-icon">YouTube</title>
                                     <path className="button--svg__border" fill="#E5E5E5" d="M23 3c11.028 0 20 8.972 20 20s-8.972 20-20 20S3 34.028 3 23 11.972 3 23 3m0-2C10.85 1 1 10.85 1 23s9.85 22 22 22 22-9.85 22-22S35.15 1 23 1z" />

@@ -7,7 +7,8 @@ import { useState, useEffect } from 'react';
 
 // Firebase
 import { collection, getDocs } from 'firebase/firestore';
-import { app, database } from '../../../firebaseConfig';
+import { database } from '../../../firebaseConfig';
+
 // database itself
 const dbInstance = collection(database, 'lugares');
 
