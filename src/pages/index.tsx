@@ -42,9 +42,9 @@ const Dashboard = () => {
           }}
             className="overflow-hidden bg-center bg-no-repeat bg-cover rounded-3xl"
           >
-            <div className="p-8 md:p-12 lg:px-16 lg:py-24 bg-green-900/25 ">
+            <div className="p-8 md:p-12 lg:px-16 lg:py-24 bg-green-900/25 animate-in slide-in-from-top duration-700">
               <div className="max-w-lg text-center sm:text-left bg-white p-4 rounded-3xl">
-                <h2 className="text-4xl font-extrabold text-black sm:text-3xl md:text-5xl tracking-wider">
+                <h2 className="text-4xl font-extrabold text-black sm:text-3xl md:text-5xl tracking-wider font-arvo">
                   Planificá tu viaje, sin mucha vuelta.
                 </h2>
 
@@ -60,17 +60,14 @@ const Dashboard = () => {
             </div>
           </aside>
 
-
-
         </Grid>
-
 
         <Grid item xs={12} md={12}>
           <section className="bg-white">
-            <div className="px-4 py-12 mx-auto max-w-screen-xl md:py-16 sm:px-6 lg:px-8">
+            <div className="px-4 py-12 mx-auto max-w-screen-xl md:py-16 sm:px-6 lg:px-8 animate-in slide-in-from-bottom duration-700">
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                  Una idea por y para aventureros 🚀
+                  Una idea por y para aventureros <div className="animate-bounce mt-3">🚀</div>
                 </h2>
 
                 <p className="mt-4 text-gray-500 sm:text-xl">

@@ -3,7 +3,7 @@ import Link from "next/link"
 const PlaceCard = ({ nombre, departamento, descripcion, esCerro, esHotel, esGranja, esCabanha, imagenCard, id }: any) => {
 
     return (
-        <div className='transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300 hover:contrast-125 cursor-pointer'>
+        <div className='transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 duration-300 hover:contrast-125 cursor-pointer'>
 
             <Link href={{
                 pathname: `/lugares/${id}`,
@@ -12,7 +12,7 @@ const PlaceCard = ({ nombre, departamento, descripcion, esCerro, esHotel, esGran
                 <div className="overflow-hidden">
                     <img className="rounded-t-3xl object-cover w-full h-52" src={imagenCard} alt="Imagen del lugar" />
 
-                    <div className="p-4 bg-slate-200 rounded-b-3xl">
+                    <div className="p-4 bg-sky-100 rounded-b-3xl hover:bg-sky-300">
 
                         <p className="text-xl text-black"> {nombre}  </p>
 
@@ -34,7 +34,7 @@ const PlaceCard = ({ nombre, departamento, descripcion, esCerro, esHotel, esGran
                             </strong> : null}
                         </div>
 
-                        <p className="mt-3 text-xs text-blue-900">
+                        <p className="mt-3 text-sm text-blue-900">
                             {descripcion}
                         </p>
                     </div>

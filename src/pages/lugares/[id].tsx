@@ -4,6 +4,22 @@ import { database } from '../../../firebaseConfig';
 import { doc, getDoc } from "firebase/firestore";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import ImageGallery from 'react-image-gallery';
+
+const images = [
+    {
+        original: 'https://dcom-prod.imgix.net/files/inline-images/1%20baja.jpg',
+        thumbnail: 'https://dcom-prod.imgix.net/files/inline-images/1%20baja.jpg',
+    },
+    {
+        original: 'https://www.nippon.com/es/ncommon/contents/features/108158/108158.jpg',
+        thumbnail: 'https://www.nippon.com/es/ncommon/contents/features/108158/108158.jpg',
+    },
+    {
+        original: 'https://podcast.duolingo.com/images/spanish/Episode%2062.jpeg',
+        thumbnail: 'https://podcast.duolingo.com/images/spanish/Episode%2062.jpeg',
+    },
+];
 
 const DetalleLugar: FunctionComponent<any> = () => {
 
@@ -30,13 +46,13 @@ const DetalleLugar: FunctionComponent<any> = () => {
         getPlace();
     }, [idFirebasePlace])
 
-    if (!place) return <> <h1>No place</h1></>
+    if (!place) return <h1>No place</h1>
 
     return (
         <>
             <div className="flex flex-col">
 
-                <div className='text-center bg-gradient-to-r from-indigo-500 via-indigo-400 to-indigo-500 p-5 rounded-3xl'>
+                <div className='text-center bg-gradient-to-r from-[#31752C] via-[#90A955] to-[#31752C] p-5 rounded-3xl font-arvo'>
                     <h2 className="text-5xl text-white font-extrabold">{place.nombre}</h2>
                 </div>
 
@@ -66,16 +82,11 @@ const DetalleLugar: FunctionComponent<any> = () => {
                 </div>
 
                 <Card>
-                    <section className="text-gray-600 body-font">
-                        <div className="container mx-auto flex flex-wrap">
-                            <div className="lg:w-full h-full">
-                                <div className="flex flex-wrap w-full bg-gray-100 py-32 px-10 relative mb-0">
-                                    {/* <img alt="gallery" className="w-full h-full object-center block  absolute inset-0"
-                                        src={portadaImg.src} /> */}
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+
+                    {/* GALLERY IMAGES */}
+                    <div className="container">
+                        <ImageGallery items={images} autoPlay={true} showPlayButton={false} useBrowserFullscreen={false} />
+                    </div>
 
 
                     {/* SEPARATOR */}
@@ -86,7 +97,7 @@ const DetalleLugar: FunctionComponent<any> = () => {
                     <div className="flex flex-col md:flex-row">
                         <div className="basis-1/2 flex-col">
 
-                            <div className="text-center text-3xl font-mono font-bold bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-2">
+                            <div className="text-center text-3xl font-mono font-bold bg-gradient-to-r from-[#31752C] via-[#90A955] to-[#31752C] text-white p-2 font-arvo">
                                 <h1>Acerca del lugar</h1>
                             </div>
 
@@ -117,8 +128,8 @@ const DetalleLugar: FunctionComponent<any> = () => {
 
             <Card className="mt-10 p-12 rounded-3xl">
                 <div className="flex flex-col md:flex-row justify-center items-center">
-                    <div className="basis-1/2 grid place-items-center mb-7 md:mb-0 bg-gradient-to-r from-indigo-500 via-indigo-400 to-indigo-500 mx-10 p-2 rounded-2xl">
-                        <h1 className="text-3xl text-white font-mono font-bold">Cómo llegar</h1>
+                    <div className="basis-1/2 grid place-items-center mb-7 md:mb-0 bg-gradient-to-r from-[#31752C] via-[#90A955] to-[#31752C] mx-10 p-2 rounded-2xl">
+                        <h1 className="text-3xl text-white font-mono font-bold font-arvo">Cómo llegar</h1>
                     </div>
                     <div className="basis-1/2">
                         <p>
@@ -133,8 +144,8 @@ const DetalleLugar: FunctionComponent<any> = () => {
 
             <Card className="mt-10 p-12 rounded-3xl">
                 <div className="flex flex-col md:flex-row justify-center items-center">
-                    <div className="basis-1/2 grid place-items-center mb-7 md:mb-0 bg-gradient-to-r from-indigo-500 via-indigo-400 to-indigo-500 mx-10 p-2 rounded-2xl">
-                        <h1 className="text-3xl font-mono font-bold text-white">Sobre la zona</h1>
+                    <div className="basis-1/2 grid place-items-center mb-7 md:mb-0 bg-gradient-to-r from-[#31752C] via-[#90A955] to-[#31752C] mx-10 p-2 rounded-2xl">
+                        <h1 className="text-3xl font-mono font-bold text-white font-arvo">Sobre la zona</h1>
                     </div>
                     <div className="basis-1/2">
                         <div className="flex flex-col">
@@ -149,8 +160,8 @@ const DetalleLugar: FunctionComponent<any> = () => {
 
             <Card className="mt-10 p-12 rounded-3xl">
                 <div className="flex flex-col md:flex-row justify-center items-center">
-                    <div className="basis-1/2 grid place-items-center mb-7 md:mb-0 bg-gradient-to-r from-indigo-500 via-indigo-400 to-indigo-500 mx-10 p-2 rounded-2xl">
-                        <h1 className="text-3xl font-mono font-bold text-white">Contacto</h1>
+                    <div className="basis-1/2 grid place-items-center mb-7 md:mb-0 bg-gradient-to-r from-[#31752C] via-[#90A955] to-[#31752C] mx-10 p-2 rounded-2xl">
+                        <h1 className="text-3xl font-mono font-bold text-white font-arvo">Contacto</h1>
                     </div>
                     <div className="basis-1/2">
                         <div className="flex flex-row space-x-3">

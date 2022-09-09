@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "~react-image-gallery/styles/css/image-gallery.css";
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 
 html,
 body {
@@ -25,4 +27,8 @@ code:not([class*='language-']):after {
 }
 code[class*='language-'] {
   padding: 0;
+}
+
+.font-arvo {
+  font-family: 'Arvo', serif;
 }

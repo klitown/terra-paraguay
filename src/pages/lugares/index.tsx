@@ -60,9 +60,9 @@ const Lugar = () => {
                     }}
                         className="overflow-hidden bg-center bg-no-repeat bg-cover rounded-3xl"
                     >
-                        <div className="flex justify-center p-8 md:p-12 lg:px-16 lg:py-24 bg-green-900/25 ">
+                        <div className="flex justify-start p-8 md:p-12 lg:px-16 lg:py-24 bg-green-900/25 animate-in slide-in-from-top duration-700">
                             <div className="max-w-xl text-center sm:text-left bg-white p-4 rounded-3xl">
-                                <h2 className="text-4xl font-extrabold text-black sm:text-3xl md:text-5xl tracking-wider">
+                                <h2 className="text-4xl font-extrabold text-black sm:text-3xl md:text-5xl tracking-wider font-arvo">
                                     Tenemos todos estos lugares para vos.
                                 </h2>
                             </div>
